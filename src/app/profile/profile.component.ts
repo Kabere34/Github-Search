@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { GitCallService } from '../gitcall.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  results!:any;
+  constructor(public searchService: GitCallService) { }
 
   ngOnInit(): void {
   }
 
   gitSearch(searchTerm:string){
+this.searchService.getUser(searchTerm).subscribe({next:(data: any) => {
+  this.results = data;
+  console.log(this.results);
+}});
 
 
   }
