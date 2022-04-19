@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { GitCallService } from '../gitcall.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-profile',
