@@ -10,17 +10,25 @@ import { User } from '../user';
 })
 export class ProfileComponent implements OnInit {
 
-  results!:any;
+
+  user!:any;
   constructor(public searchService: GitCallService) { }
 
   ngOnInit(): void {
   }
 
+
   gitSearch(searchTerm:string){
 this.searchService.getUser(searchTerm).subscribe({next:(data: any) => {
-  this.results = data;
-  console.log(this.results);
+  this.user = data;
+  console.log(this.user);
 }});
+
+// gitSearch(searchTerm:string){
+//   this.searchService.getRepos(searchTerm).subscribe({next:(data: any) => {
+//     this.results = data;
+//     console.log(this.results);
+//   }});
 
 
   }
