@@ -7,8 +7,11 @@ button {
   border-radius: 5%;
   background-color: bisque;
 }
+.card {
+  background-color: bisque;
+}
 h1 {
-  color: antiquewhite;
+  color: rgb(249, 228, 201);
 }
 a {
   text-decoration: none;

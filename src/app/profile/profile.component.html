@@ -23,7 +23,7 @@
         </div>
 
         <button
-          class="btn mt-2 pd-3 bg-white"
+          class="btn mt-2 pd-3"
           role="button"
           (click)="gitSearch(val.value)"
         >
@@ -40,7 +40,6 @@
           View Repositories
         </button>
         <div class="row">
-          <p><span>Followers:</span>{{ user?.followers }}</p>
           <div class="col pt-1 m-2 text-center" *ngFor="let repo of repos">
             <div class="card">
               <h2><span>Repository name:</span> {{ repo.name }}</h2>
