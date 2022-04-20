@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 export class GitCallService {
   results!: any;
 
+
   constructor(private http: HttpClient) { }
 
   getUser(username: string) {

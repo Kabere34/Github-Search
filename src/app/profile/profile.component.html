@@ -31,35 +31,27 @@
         </button>
         <h3>{{ user?.login }}</h3>
         <!-- <p><span></span>{{ user?.login }}</p> -->
-        <!-- <p><span></span>{{ user?.followers }}</p>
-        <p><span></span> {{ user?.following }}</p> -->
+        <!-- <p><span>Followers:</span>{{ user?.followers }}</p> -->
+        <p><span></span> {{ user?.following }}</p>
       </div>
 
       <div class="">
         <button class="repos" (click)="openRepo(val.value)">
           View Repositories
         </button>
-        <div class="">
-          <div
-            class="col w-50 card pt-1 m-2 text-center"
-            *ngFor="let repo of repos"
-          >
-            <h2><span>Repository name:</span> {{ repo.name }}</h2>
-            <p><span>Description:</span> {{ repo.description }}</p>
-            <a [attr.href]="repo.clone_url"
-              >View {{ repo.name }} Repository on Github
-            </a>
+        <div class="row">
+          <p><span>Followers:</span>{{ user?.followers }}</p>
+          <div class="col pt-1 m-2 text-center" *ngFor="let repo of repos">
+            <div class="card">
+              <h2><span>Repository name:</span> {{ repo.name }}</h2>
+              <p><span>Description:</span> {{ repo.description }}</p>
+              <a [attr.href]="repo.clone_url"
+                >View {{ repo.name }} Repository on Github
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- <div *ngFor="let repo of repos">
-  <a [attr.href]="repo.clone_url">
-    {{ repo.name }}
-  </a>
-</div> -->
-  <!-- <a routerLink="{{ repos.clone_url }}">View</a>
-{{ repos.clone_url }} -->
 </div>

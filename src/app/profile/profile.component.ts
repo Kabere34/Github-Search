@@ -37,15 +37,7 @@ export class ProfileComponent implements OnInit {
         }
       });
 
-
     }
-
-
-    // gitSearch(searchTerm:string){
-    //   this.searchService.getRepos(searchTerm).subscribe({next:(data: any) => {
-    //     this.results = data;
-    //     console.log(this.results);
-    //   }});
 
   }
 
