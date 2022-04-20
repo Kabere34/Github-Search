@@ -9,8 +9,15 @@ export class GitCallService {
   results!: any;
 
   constructor(private http: HttpClient) { }
+
   getUser(username: string) {
     return this.http.get(`https://api.github.com/users/${username}`, {
+      headers: { Authorization: `token ${environment.apiKey}` }
+    })
+  }
+
+getRepos(username: string) {
+    return this.http.get(`https://api.github.com/users/${username}/repos`, {
       headers: { Authorization: `token ${environment.apiKey}` }
     })
   }

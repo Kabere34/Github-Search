@@ -1,5 +1,5 @@
-<div class="container-fluid mg-3">
-  <div class="main">
+<div class="container mg-3">
+  <div class="main text-center">
     <div class="main-cnt mg-5">
       <h1 class="text-center">Github Search</h1>
       <p>
@@ -7,44 +7,59 @@
         in the details below to get results:
       </p>
 
-      <label for="username">Username:</label>
       <input
         class="input"
         type="text"
         #val
         placeholder="Enter your Github Username"
       />
-      <button
-        class="btn pd-3 bg-white"
-        role="button"
-        (click)="gitSearch(val.value)"
-      >
-        Search
-      </button>
-      <!-- <button class="repos" (click)="(openRepo)">View Repositories</button> -->
     </div>
 
-    <div class="row mg-2">
+    <div class="container-fluid">
       <div class="">
-        <img src="{{ user.avatar_url }}" alt="{{ user.login }}" />
+        <div class="">
+          <!-- <h2>User-Details</h2> -->
+          <img src="{{ user?.avatar_url }}" alt="{{ user?.login }}" />
+        </div>
+
+        <button
+          class="btn mt-2 pd-3 bg-white"
+          role="button"
+          (click)="gitSearch(val.value)"
+        >
+          Search
+        </button>
+        <h3>{{ user?.login }}</h3>
+        <!-- <p><span></span>{{ user?.login }}</p> -->
+        <!-- <p><span></span>{{ user?.followers }}</p>
+        <p><span></span> {{ user?.following }}</p> -->
       </div>
-      <div class="user-details">
-        <h3>{{ user.login }}</h3>
-        <p>Username:{{ user.login }}</p>
-        <p>Followers:{{ user.followers }}</p>
-        <p>Following:{{ user.following }}</p>
+
+      <div class="">
+        <button class="repos" (click)="openRepo(val.value)">
+          View Repositories
+        </button>
+        <div class="">
+          <div
+            class="col w-50 card pt-1 m-2 text-center"
+            *ngFor="let repo of repos"
+          >
+            <h2><span>Repository name:</span> {{ repo.name }}</h2>
+            <p><span>Description:</span> {{ repo.description }}</p>
+            <a [attr.href]="repo.clone_url"
+              >View {{ repo.name }} Repository on Github
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- <div>
-  <h2>Repositories</h2>
-  <h2>Repository name:{{ results.name }}</h2>
-  <!-- <h3>{{ results.login }}</h3>
-  <!-- <img src="{{ results.avatar_url }}" alt="{{ results.login }}" />
-  <!-- <p>Username:{{ results.login }}</p>
-  <p>Followers:{{ results.followers }}</p>
-  <p>Following:{{ results.following }}</p> -->
-<!-- </div>  -->
-<!-- repo button -->
+  <!-- <div *ngFor="let repo of repos">
+  <a [attr.href]="repo.clone_url">
+    {{ repo.name }}
+  </a>
+</div> -->
+  <!-- <a routerLink="{{ repos.clone_url }}">View</a>
+{{ repos.clone_url }} -->
+</div>
