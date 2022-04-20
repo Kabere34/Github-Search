@@ -5,6 +5,7 @@ input {
 }
 button {
   border-radius: 5%;
+  background-color: bisque;
 }
 h1 {
   color: antiquewhite;
