@@ -9,12 +9,13 @@ button {
 }
 .card {
   background-color: bisque;
+  border: 1px solid rgb(90, 232, 90);
 }
 h1 {
   color: rgb(249, 228, 201);
 }
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(83, 79, 79);
   text-decoration-line: underline;
 }
