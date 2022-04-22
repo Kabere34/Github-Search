@@ -1,27 +1,43 @@
-# GhSearch
+# Github-Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+## Table of Content
 
-## Development server
+- [Description]
+- [Installation Requirement]
+- [Technology Used]
+- [Licence]
+- [Authors Info]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+- This is a site that allows users to input github user names and get results for user details and their repositories. Each repository contains links to navigate to to the actual github repositories.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+### Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Either a computer,phone,tablet
+- Access to the Internet
 
-## Running unit tests
+### Installation and Interaction Process
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Click on the live link in the About section
+Input username and click on the view repositories to get a list of all repositories.
 
-## Running end-to-end tests
+## Technology Used
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- HTML to build the page's structure.
 
-## Further help
+- CSS to style the pages
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-Typescript for functionality
+
+-Javascript for functionality
+
+## Licence
+
+- Copyright (c) [2022] [Click to View Licence](LICENSE)
+
+## Authors Info
+
+- Ivy Kabere
